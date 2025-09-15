@@ -1,6 +1,9 @@
 # CreditSage — AI-Powered Loan Approval Prediction
 
 A Streamlit app that predicts the probability of loan approval by combining structured profile data with sentence-transformer embeddings of the applicant's justification text. It also generates actionable guidance using Groq's Llama models.
+<img width="1915" height="939" alt="Screenshot 2025-09-16 021716" src="https://github.com/user-attachments/assets/b92948af-2560-4cdf-bdc0-e890df55f8b0" />
+<img width="1870" height="895" alt="Screenshot 2025-09-16 021737" src="https://github.com/user-attachments/assets/44d421bf-73ab-46a4-a487-4372045669c9" />
+
 
 ## Features
 - Futuristic dark UI with glassmorphism and neon accents
