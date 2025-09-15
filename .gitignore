@@ -1,0 +1,68 @@
+# Python & Streamlit
+__pycache__/
+*.py[cod]
+*.so
+*.dylib
+*.dll
+*.egg-info/
+.eggs/
+.build/
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.pyre/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter / Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+.cache/
+.env
+.env.*
+
+# Streamlit
+.streamlit/secrets.toml
+**/.streamlit/secrets.toml
+
+# Model artifacts and large binaries not for source control
+# Keep the active ones unignored by negation rules below
+*.keras
+*.h5
+*.pt
+*.onnx
+*.ckpt
+*.pkl
+*.pk1
+
+# Allowlist the needed runtime artifacts
+!model_weights.pkl
+!embedder.pkl
+!scaler.pk1
+
+# Data
+/data/*
+!data/loan_data.csv
+
+# Reports/exports
+*.pdf
+*.csv
+exports/
+
+# Coverage
+.coverage
+htmlcov/

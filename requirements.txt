@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+scikit-learn
+sentence-transformers
+tensorflow
+plotly
+google-generativeai
+joblib
+PyPDF2
+groq
