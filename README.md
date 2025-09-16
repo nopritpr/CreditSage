@@ -1,8 +1,14 @@
 # CreditSage — AI-Powered Loan Approval Prediction
 
 A Streamlit app that predicts the probability of loan approval by combining structured profile data with sentence-transformer embeddings of the applicant's justification text. It also generates actionable guidance using Groq's Llama models.
-<img width="1915" height="939" alt="Screenshot 2025-09-16 021716" src="https://github.com/user-attachments/assets/b92948af-2560-4cdf-bdc0-e890df55f8b0" />
-<img width="1870" height="895" alt="Screenshot 2025-09-16 021737" src="https://github.com/user-attachments/assets/44d421bf-73ab-46a4-a487-4372045669c9" />
+<img width="1611" height="741" alt="Screenshot 2025-09-16 104932" src="https://github.com/user-attachments/assets/fa94f280-e5ac-427f-a90b-e2c660d5b5a6" />
+<img width="1634" height="717" alt="Screenshot 2025-09-16 104953" src="https://github.com/user-attachments/assets/072a4d9e-5795-4d14-8415-c20676b97d3c" />
+<img width="1672" height="502" alt="Screenshot 2025-09-16 105003" src="https://github.com/user-attachments/assets/bb1808b4-33af-4afd-8ca2-72b7ce557955" />
+
+
+<img width="1545" height="837" alt="Screenshot 2025-09-16 105319" src="https://github.com/user-attachments/assets/3c04800d-0078-4f18-b1eb-145a9fc57d42" />
+<img width="1605" height="890" alt="Screenshot 2025-09-16 105337" src="https://github.com/user-attachments/assets/3f90cd29-ce75-4272-9db0-c0cec6b7c71c" />
+
 
 
 ## Features
