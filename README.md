@@ -50,11 +50,22 @@ python -m venv .venv
 ```powershell
 pip install -r requirements.txt
 ```
-3. Run the app
+3. Configure your Groq API key (local)
+	- Create a `.env` file (or copy `.env.example` to `.env`) and set:
+```env
+GROQ_API_KEY=sk_your_key_here
+```
+	- Alternatively, set an environment variable in your shell/session:
+```powershell
+$env:GROQ_API_KEY = "sk_your_key_here"
+```
+	- In Streamlit Cloud or production, use `st.secrets` instead.
+
+4. Run the app
 ```powershell
 .\.venv\Scripts\streamlit.exe run app.py
 ```
-4. Open the local URL shown in the terminal (e.g., http://localhost:8501)
+5. Open the local URL shown in the terminal (e.g., http://localhost:8501)
 
 ## Model Artifacts
 We avoid Keras deserialization issues by rebuilding the model architecture in `app.py` and loading weights from `model_weights.pkl`.
@@ -69,7 +80,7 @@ If you need to retrain:
 This will regenerate `model_weights.pkl` (and ensure `embedder.pkl` / `scaler.pk1` exist).
 
 ## Groq AI Feedback
-The app uses Groq's `llama-3.1-8b-instant` to produce guidance. The API key is configured server-side in `app.py` to avoid any UI exposure. For production, prefer environment variables or `st.secrets` instead of hardcoding secrets.
+The app uses Groq's `llama-3.1-8b-instant` to produce guidance. The API key is loaded in this order: `st.secrets` → OS environment variables (including those from `.env`). Keys are never requested in the UI. For production, prefer `st.secrets` or infrastructure-level env vars.
 
 ## Configuration and Theming
 We ship a dark neon theme via `.streamlit/config.toml`. You can further tweak colors and fonts there. The app also injects some scoped CSS for glass panels and neon accents.
@@ -82,7 +93,7 @@ We ship a dark neon theme via `.streamlit/config.toml`. You can further tweak co
 ## Troubleshooting
 - "Could not deserialize class 'Functional'": use the shipped approach (weights + rebuild) instead of loading `.keras` files.
 - Missing packages: re-run `pip install -r requirements.txt` in the active venv.
-- Import errors with Keras/Transformers: ensure `tf-keras` is installed and used as in `app.py`.
+- Import errors with Keras/Transformers: ensure `tf-keras` is installed and imported as in `app.py` (`from tf_keras import layers`).
 - Streamlit doesn’t start: check the terminal for errors and confirm you’re using the venv’s `streamlit.exe`.
 
 ## License

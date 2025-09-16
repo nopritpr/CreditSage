@@ -9,3 +9,5 @@ google-generativeai
 joblib
 PyPDF2
 groq
+python-dotenv
+tf-keras

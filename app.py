@@ -10,6 +10,7 @@ import plotly.graph_objects as go
 from groq import Groq
 from io import StringIO
 import os
+from dotenv import load_dotenv
 
 # Config
 st.set_page_config(page_title="CreditSage • Loan Approval AI", page_icon="🏦", layout="wide")
@@ -79,9 +80,10 @@ def create_model():
 model = create_model()
 
 # Groq setup (server-side; not exposed in UI)
-# Reads from Streamlit secrets or environment variable.
+# Reads from .env (local), Streamlit secrets, or environment variable.
 client = None
 _secrets_key = None
+load_dotenv()  # load variables from a local .env if present
 try:
     if hasattr(st, "secrets") and "GROQ_API_KEY" in st.secrets:
         _secrets_key = st.secrets["GROQ_API_KEY"]
